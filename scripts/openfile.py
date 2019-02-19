@@ -2,8 +2,23 @@
 import nuke
 import nukescripts
 import os
+import subprocess
+import sys
 
-def openfile():
+def browser(path):
+	brws = "nautilus"
+	if sys.platform == "win32":
+		brws = "start"
+	elif sys.platform == "darwin":
+		brws = "open"
+	p = subprocess.Popen([brws, path], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+	stdout, stderr = p.communicate()
+	if stderr:
+		nuke.tprint(stderr, file=sys.stderr)
+	if stdout:
+		nuke.tprint(stdout)
+
+def main():
 	focusKnobs = ["file","vfield_file"]
 	nodes = nuke.selectedNodes()
 	if len(nodes) != 1:
@@ -19,6 +34,6 @@ def openfile():
 			if not os.path.exists(parentPath):
 				nuke.message("경로가 존재하지 않습니다.")
 				return
-			nukescripts.start(parentPath)
+			browser(parentPath)
 			return
-	nuke.message("file Knob을 사용하는 노드가 아닙니다.")
+	nuke.message("file knob을 사용하는 노드가 아닙니다.")
