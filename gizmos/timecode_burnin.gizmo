@@ -1,0 +1,48 @@
+#! /home/penguin/Nuke11.3v1/libnuke-11.3.1.so -nx
+version 11.3 v1
+Gizmo {
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos 264
+  ypos -38
+ }
+ Text2 {
+  font_size_toolbar 100
+  font_width_toolbar 100
+  font_height_toolbar 100
+  message "\[metadata input/timecode]"
+  old_message {{48 48 58 53 57 58 53 53 58 50 49}
+    }
+  old_expression_markers {{0 10}
+    }
+  box {0 {height*0.05} {width} {height}}
+  xjustify center
+  yjustify bottom
+  transforms {{0 2}
+    }
+  cursor_position 25
+  font {{ Liberation Mono : Regular : liberation/LiberationMono-Regular.ttf : 0 }}
+  global_font_scale {{width*0.00035}}
+  center {1024 778}
+  cursor_initialised true
+  autofit_bbox false
+  initial_cursor_position {{0 1080}
+    }
+  group_animations {{0} imported: 0 selected: items: "root transform/"}
+  animation_layers {{1 11 1024 778 0 0 1 1 0 0 0 0}
+    }
+  enable_background true
+  background_opacity 0.7
+  background_border_y 8
+  name bottom_right
+  xpos 264
+  ypos 25
+ }
+ Output {
+  name Output1
+  xpos 264
+  ypos 102
+ }
+end_group

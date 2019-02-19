@@ -1,0 +1,237 @@
+#! /home/penguin/Nuke11.3v1/libnuke-11.3.1.so -nx
+version 11.3 v1
+Gizmo {
+ note_font "Bitstream Vera Sans"
+ lifetimeStart 44458
+ lifetimeEnd 44937
+ addUserKnob {20 User}
+ addUserKnob {1 vender}
+ vender vender
+ addUserKnob {1 shot -STARTLINE}
+ shot FOO_0010
+ addUserKnob {1 user}
+ user penguin
+ addUserKnob {4 task -STARTLINE M {comp light rnd "" ""}}
+ addUserKnob {1 memo}
+ memo memo
+ addUserKnob {3 offset}
+ offset 10
+ addUserKnob {7 fontsize R 0 2}
+ fontsize 1
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos 400
+  ypos 111
+ }
+ Text2 {
+  font_size_toolbar 100
+  font_width_toolbar 100
+  font_height_toolbar 100
+  opacity {1}
+  message "\[value parent.shot]"
+  old_message {{70 79 79 95 48 48 49 48}
+    }
+  old_expression_markers {{0 7}
+    }
+  box {0 {"height - (100 * global_font_scale)"} {width} {height}}
+  xjustify center
+  transforms {{0 2}
+    }
+  cursor_position 19
+  font {{ Liberation Mono : Regular : liberation/LiberationMono-Regular.ttf : 0 }}
+  global_font_scale {{"width * 0.0003 * parent.fontsize"}}
+  leading {0}
+  translate {0 0}
+  rotate {0}
+  scale {1 1}
+  skewX {0}
+  skewY {0}
+  center {1024 778}
+  cursor_initialised true
+  autofit_bbox false
+  initial_cursor_position {{1024 968}
+    }
+  group_animations {{0} imported: 0 selected: items: "root transform/"}
+  animation_layers {{1 11 1024 778 0 0 1 1 0 0 0 0}
+    }
+  color {1}
+  enable_background true
+  background_color {0 0 0 1}
+  background_opacity {0.5}
+  background_border_x {{width}}
+  background_border_y {5}
+  shadow_color {0 0 0 1}
+  shadow_opacity {0.7}
+  shadow_angle {225}
+  shadow_distance {5}
+  shadow_softness {0}
+  shadow_size {0}
+  name topCenter
+  xpos 400
+  ypos 135
+ }
+ Text2 {
+  font_size_toolbar 100
+  font_width_toolbar 100
+  font_height_toolbar 100
+  opacity {1}
+  message "\[value parent.vender]"
+  old_message {{118 101 110 100 101 114}
+    }
+  old_expression_markers {{0 5}
+    }
+  box {0 {"height - (100 * global_font_scale)"} {width} {height}}
+  transforms {{0 2}
+    }
+  cursor_position 20
+  font {{ Liberation Mono : Regular : liberation/LiberationMono-Regular.ttf : 0 }}
+  global_font_scale {{"width * 0.0003 * parent.fontsize"}}
+  leading {0}
+  scale {1 1}
+  cursor_initialised true
+  autofit_bbox false
+  initial_cursor_position {{0 968}
+    }
+  group_animations {{0} imported: 0 selected: items: "root transform"}
+  animation_layers {{1 11 1024 778 0 0 1 1 0 0 0 0}
+    }
+  color {1}
+  background_color {0 0 0 1}
+  background_opacity {1}
+  background_border_x {10}
+  background_border_y {5}
+  shadow_color {0 0 0 1}
+  shadow_opacity {0.7}
+  shadow_angle {225}
+  shadow_distance {5}
+  shadow_softness {0}
+  shadow_size {0}
+  name topLeft
+  xpos 400
+  ypos 159
+ }
+ Text2 {
+  font_size_toolbar 100
+  font_width_toolbar 100
+  font_height_toolbar 100
+  message "\[date %Y]-\[date %m]-\[date %d] \[date %T]ll"
+  old_message {{50 48 49 57 45 48 50 45 49 56 32 49 52 58 50 51 58 49 55 108 108}
+    }
+  old_expression_markers {{0 3 5 6 8 9 11 18}
+    }
+  box {0 {"height - (100 * global_font_scale)"} {width} {height}}
+  xjustify right
+  transforms {{0 2}
+    }
+  font {{ Liberation Mono : Regular : liberation/LiberationMono-Regular.ttf : 0 }}
+  global_font_scale {{"width * 0.0003 * parent.fontsize"}}
+  center {1024 778}
+  cursor_initialised true
+  autofit_bbox false
+  initial_cursor_position {{1024 968}
+    }
+  group_animations {{0} imported: 0 selected: items: "root transform/"}
+  animation_layers {{1 11 1024 778 0 0 1 1 0 0 0 0}
+    }
+  name topRight
+  xpos 400
+  ypos 183
+ }
+ Text2 {
+  font_size_toolbar 100
+  font_width_toolbar 100
+  font_height_toolbar 100
+  message "\[value parent.memo]"
+  old_message {{109 101 109 111}
+    }
+  old_expression_markers {{0 3}
+    }
+  box {0 0 {width} {"100 * global_font_scale"}}
+  xjustify center
+  yjustify bottom
+  transforms {{0 2}
+    }
+  cursor_position 19
+  font {{ Liberation Mono : Regular : liberation/LiberationMono-Regular.ttf : 0 }}
+  global_font_scale {{"width * 0.0003 * parent.fontsize"}}
+  center {1024 778}
+  cursor_initialised true
+  autofit_bbox false
+  initial_cursor_position {{1024 968}
+    }
+  group_animations {{0} imported: 0 selected: items: "root transform/"}
+  animation_layers {{1 11 1024 778 0 0 1 1 0 0 0 0}
+    }
+  enable_background true
+  background_opacity 0.5
+  background_border_x {{width}}
+  name bottomCenter
+  xpos 400
+  ypos 207
+ }
+ Text2 {
+  font_size_toolbar 100
+  font_width_toolbar 100
+  font_height_toolbar 100
+  message "\[value parent.user] \[value parent.task] v\[format %03d 1]"
+  old_message {{112 101 110 103 117 105 110 32 99 111 109 112 32 118 48 48 49}
+    }
+  old_expression_markers {{0 6 8 11 14 16}
+    }
+  box {0 0 {width} {"100 * global_font_scale"}}
+  yjustify bottom
+  transforms {{0 2}
+    }
+  cursor_position 56
+  font {{ Liberation Mono : Regular : liberation/LiberationMono-Regular.ttf : 0 }}
+  global_font_scale {{"width * 0.0003 * parent.fontsize"}}
+  center {1024 778}
+  cursor_initialised true
+  autofit_bbox false
+  initial_cursor_position {{1024 968}
+    }
+  group_animations {{0} imported: 0 selected: items: "root transform/"}
+  animation_layers {{1 11 1024 778 0 0 1 1 0 0 0 0}
+    }
+  name bottomLeft
+  xpos 400
+  ypos 231
+ }
+ Text2 {
+  font_size_toolbar 100
+  font_width_toolbar 100
+  font_height_toolbar 100
+  message "\[metadata input/timecode] \[format %06d \[frame]]"
+  old_message {{48 48 58 51 49 58 48 56 58 49 49 32 48 52 52 56 52 51}
+    }
+  old_expression_markers {{0 10 12 17}
+    }
+  box {0 0 {width} {"100 * global_font_scale"}}
+  xjustify right
+  yjustify bottom
+  transforms {{0 2}
+    }
+  cursor_position 47
+  font {{ Liberation Mono : Regular : liberation/LiberationMono-Regular.ttf : 0 }}
+  global_font_scale {{"width * 0.0003 * parent.fontsize"}}
+  center {1024 778}
+  cursor_initialised true
+  autofit_bbox false
+  initial_cursor_position {{2048 0}
+    }
+  group_animations {{0} imported: 0 selected: items: "root transform/"}
+  animation_layers {{1 11 1024 778 0 0 1 1 0 0 0 0}
+    }
+  name bottomRight
+  selected true
+  xpos 400
+  ypos 255
+ }
+ Output {
+  name Output1
+  xpos 400
+  ypos 279
+ }
+end_group
